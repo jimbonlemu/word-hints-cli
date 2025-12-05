@@ -9,6 +9,51 @@ import { truncate } from "./lib/utils/truncate.js";
 
 let config = loadConfig(); // single source of truth
 
+// === CHECK FOR DIRECT SEARCH MODE ===
+const args = process.argv.slice(2); 
+
+if (args.length > 0) {
+  const query = args[0];
+
+  // Handle flags
+  if (query === "--help" || query === "-h") {
+    console.log(`
+Word Hunts CLI v0.1.0
+
+USAGE:
+  wh [query]           Search for words starting with [query]
+  wh                   Start interactive mode
+  
+OPTIONS:
+  --help, -h           Show this help
+  --version, -v        Show version
+  
+EXAMPLES:
+  wh cat               Search words starting with "cat"
+  wh                   Start interactive mode
+    `);
+    process.exit(0);
+  }
+
+  if (query === "--version" || query === "-v") {
+    console.log("word-hunts-cli v0.1.0");
+    process.exit(0);
+  }
+
+  // Direct search mode
+  const results = searchByPrefix(query, config);
+  const limited = results.slice(0, config.MAX_RESULTS);
+
+  if (limited.length === 0) {
+    console.log(`No words found starting with "${query}"`);
+    process.exit(0);
+  }
+
+  console.log(`Results for "${query}" (${limited.length}/${results.length}):\n`);
+  printResults(limited, config.COLUMNS, config.CELL_WIDTH, config.TABLE_MODE, truncate);
+  process.exit(0);
+}
+
 const rl = readline.createInterface({
   input: process.stdin,
   output: process.stdout
