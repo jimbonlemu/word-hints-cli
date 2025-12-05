@@ -1,6 +1,6 @@
 {
   "name": "@jimbonlemu/word-hunts-cli",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "type": "module",
   "description": "Fast offline CLI tool for instant English word-prefix search",
   "main": "index.js",
