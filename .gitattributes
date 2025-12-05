@@ -1,0 +1,41 @@
+# Handle line endings consistently across platforms
+* text=auto
+
+# Force specific line endings for specific file types
+*.js text eol=lf
+*.json text eol=lf
+*.md text eol=lf
+*.yml text eol=lf
+*.yaml text eol=lf
+*.toml text eol=lf
+*.txt text eol=lf
+
+# Scripts should use LF even on Windows
+*.sh text eol=lf executable
+*.bat text eol=crlf
+*.cmd text eol=crlf
+
+# Binary files - do not modify
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.gif binary
+*.ico binary
+*.pdf binary
+
+# Package files - do not modify
+*.zip binary
+*.tar.gz binary
+
+# Config files with consistent line endings
+package.json text eol=lf
+package-lock.json text eol=lf
+npm-shrinkwrap.json text eol=lf
+
+# Project specific files
+*.config text eol=lf
+*.env* text eol=lf
+
+# Ignore files as binary to prevent Git from modifying them
+.DS_Store binary
+Thumbs.db binary
