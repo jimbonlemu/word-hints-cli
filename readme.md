@@ -1,15 +1,15 @@
 # Word Hunts
 
 ```
-██     ██ ▄████▄ █████▄  ████▄    ██  ██ ██  ██ ███  ██ ██████ ▄█████ 
-██ ▄█▄ ██ ██  ██ ██▄▄██▄ ██  ██   ██████ ██  ██ ██ ▀▄██   ██   ▀▀▀▄▄▄ 
+██     ██ ▄████▄ █████▄  ████▄    ██  ██ ██  ██ ███  ██ ██████ ▄█████
+██ ▄█▄ ██ ██  ██ ██▄▄██▄ ██  ██   ██████ ██  ██ ██ ▀▄██   ██   ▀▀▀▄▄▄
  ▀██▀██▀  ▀████▀ ██   ██ ████▀    ██  ██ ▀████▀ ██   ██   ██   █████▀
 ```
 
 [![npm version](https://img.shields.io/npm/v/@jimbonlemu/word-hunts.svg)](https://www.npmjs.com/package/@jimbonlemu/word-hunts)
 [![license](https://img.shields.io/npm/l/@jimbonlemu/word-hunts.svg)](https://github.com/jimbonlemu/word-hunts/blob/main/LICENSE)
 
-A fast and customizable command-line tool for searching English words by prefix.  
+A fast and customizable command-line tool for searching English words by prefix.
 Built for games like **Last Letter**, word puzzles, linguistics tools, and general word lookup.
 
 This CLI loads a local dictionary (400k+ words) and performs instant prefix searches using an optimized binary-search algorithm.
@@ -21,6 +21,7 @@ This CLI loads a local dictionary (400k+ words) and performs instant prefix sear
 - 🚀 **Instant prefix search** (optimized binary-search, extremely fast)
 - 📚 Works fully **offline** with local dictionary (400k+ words)
 - 🎯 **Direct search mode** or **interactive mode**
+- 🌍 **Multilingual support** with English and Indonesian UI
 - 🎛️ **Customizable output**
   - Table mode ON/OFF
   - Max result limit
@@ -88,6 +89,15 @@ wh --help
 wh --version
 ```
 
+### Language Switching
+
+You can switch between supported languages in interactive mode:
+
+```bash
+/lang en    # Switch to English
+/lang id    # Switch to Indonesian
+```
+
 ---
 
 ## 🖥️ Commands
@@ -111,6 +121,7 @@ wh --version
 | `sres <num>` | Set result limit |
 | `scol <num>` | Set number of columns |
 | `scw <num>` | Set cell width |
+| `/lang <code>` | Switch language (en/id) |
 | `getui` | Show UI header |
 | `/q` | Quit the program |
 
@@ -135,7 +146,7 @@ This CLI uses the `words_dictionary.json` file from [dwyl/english-words](https:/
 
 The dictionary contains 479k English words, originally sourced from [Infochimps](https://web.archive.org/web/20131118073324/https://www.infochimps.com/datasets/word-list-350000-simple-english-words-excel-readable) and expanded by the dwyl community.
 
-**License:** [Unlicense](https://unlicense.org/) (Public Domain)  
+**License:** [Unlicense](https://unlicense.org/) (Public Domain)
 All credit for the dictionary data belongs to the original authors.
 
 ---
