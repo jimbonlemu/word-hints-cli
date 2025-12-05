@@ -50,6 +50,6 @@
   "interactive_command_result_limit": "Atur batas hasil",
   "interactive_command_columns": "Atur jumlah kolom",
   "interactive_command_cell_width": "Atur lebar sel",
-  "interactive_command_refresh": "Tampilkan header UI",
+  "interactive_command_refresh": "Refresh/Tampilkan header UI",
   "interactive_command_quit": "Keluar dari program"
 }

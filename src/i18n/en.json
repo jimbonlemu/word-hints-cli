@@ -50,6 +50,6 @@
   "interactive_command_result_limit": "Set result limit",
   "interactive_command_columns": "Set number of columns",
   "interactive_command_cell_width": "Set cell width",
-  "interactive_command_refresh": "Show UI header",
-  "interactive_command_quit": "Quit the program"
+  "interactive_command_refresh": "Refresh/Show UI header",
+  "interactive_command_quit": "Exit the program"
 }
