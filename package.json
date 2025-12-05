@@ -1,12 +1,12 @@
 {
-  "name": "word-hunts-cli",
+  "name": "@jimbonlemu/word-hunts-cli",
   "version": "0.1.0",
   "type": "module",
   "description": "Fast offline CLI tool for instant English word-prefix search",
   "main": "index.js",
   "bin": {
-    "word-hunts": "./index.js",
-    "wh": "./index.js"
+    "word-hunts": "index.js",
+    "wh": "index.js"
   },
   "files": [
     "index.js",
@@ -32,7 +32,7 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/jimbonlemu/word-hunts-cli"
+    "url": "git+https://github.com/jimbonlemu/word-hunts-cli.git"
   },
   "engines": {
     "node": ">=14.0.0"
